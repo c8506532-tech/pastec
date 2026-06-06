@@ -6,18 +6,15 @@
 
     <title>Blue Stream</title>
 
-    <!-- Aperçu du lien -->
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:image" content="caiman.png">
     <meta property="og:url" content="">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="caiman.png">
 
     <style>
-
         *{
             margin:0;
             padding:0;
@@ -26,19 +23,14 @@
 
         body{
             font-family:Arial,sans-serif;
-
             min-height:100vh;
-
             display:flex;
             justify-content:center;
             align-items:center;
-
             overflow:hidden;
-
             background:
             radial-gradient(circle at top left,#123bff,#020617),
             radial-gradient(circle at bottom right,#00aeff,#000814);
-
             animation:bgmove 10s infinite alternate;
         }
 
@@ -52,25 +44,15 @@
         }
 
         .container{
-
             width:92%;
             max-width:950px;
-
             background:rgba(255,255,255,0.08);
-
             backdrop-filter:blur(15px);
-
             border:1px solid rgba(255,255,255,0.15);
-
             border-radius:30px;
-
             padding:35px;
-
-            box-shadow:
-            0 0 50px rgba(0,140,255,0.35);
-
+            box-shadow: 0 0 50px rgba(0,140,255,0.35);
             position:relative;
-
             animation:float 6s ease-in-out infinite;
         }
 
@@ -85,12 +67,9 @@
 
         .container::before{
             content:"";
-
             position:absolute;
             inset:-2px;
-
             border-radius:32px;
-
             background:linear-gradient(
                 45deg,
                 #00bfff,
@@ -98,186 +77,111 @@
                 #00e1ff,
                 #004cff
             );
-
             z-index:-1;
-
             filter:blur(12px);
-
             opacity:0.7;
         }
 
         h1{
-
             text-align:center;
-
             color:white;
-
             font-size:3rem;
-
             margin-bottom:20px;
-
             text-shadow:
             0 0 15px #00bfff,
             0 0 35px #0066ff;
         }
 
         .subtitle{
-
             text-align:center;
-
             color:#d8ecff;
-
             font-size:1.15rem;
-
             margin-bottom:30px;
-
             line-height:1.7;
         }
 
         .video-box{
-
             position:relative;
-
             overflow:hidden;
-
             border-radius:25px;
-
-            box-shadow:
-            0 10px 40px rgba(0,140,255,0.5);
+            box-shadow: 0 10px 40px rgba(0,140,255,0.5);
+            background: rgba(0, 0, 0, 0.3); /* Léger fond sombre pour la boîte */
+            padding: 20px 0; /* Espace interne pour que l'image réduite respire */
         }
+
+        /* MODIFICATIONS ICI : Taille et Forme de l'image */
+        .img-responsive {
+            display: block;
+            width: 100%;
+            max-width: 300px;     /* Modifie cette valeur (ex: 50px, 150px, 400px) pour changer la TAILLE */
+            height: auto;          /* Garde les proportions d'origine */
+            margin: 0 auto;        /* Centre l'image horizontalement */
             
-        video{
-
-            width:100%;
-
-            display:block;
-
-            border-radius:25px;
-
-            background:black;
+            /* Gestion de la FORME */
+            border-radius: 15px;   /* Arrondit joliment les angles. Note : Mets "50%" si tu veux une image totalement RONDE */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Optionnel : ajoute une ombre sous l'image */
         }
 
         .video-overlay{
-
             position:absolute;
-
             inset:0;
-
             background:linear-gradient(
                 transparent,
                 rgba(0,0,0,0.55)
             );
-
             display:flex;
-
             justify-content:center;
-
             align-items:flex-end;
-
             padding-bottom:35px;
-
             pointer-events:none;
         }
 
-        .watch-btn{
-
-            background:linear-gradient(
-                45deg,
-                #00bfff,
-                #004cff
-            );
-
-            color:white;
-
-            padding:15px 40px;
-
-            border-radius:50px;
-
-            font-size:1rem;
-
-            font-weight:bold;
-
-            box-shadow:
-            0 0 25px rgba(0,191,255,0.8);
-
-            animation:pulse 2s infinite;
-        }
-
-        @keyframes pulse{
-
-            0%{
-                transform:scale(1);
-            }
-
-            50%{
-                transform:scale(1.05);
-            }
-
-            100%{
-                transform:scale(1);
-            }
-
-        }
-
         .footer{
-
             margin-top:28px;
-
             text-align:center;
-
             color:#cfe7ff;
-
             line-height:1.7;
         }
 
         @media(max-width:768px){
-
             h1{
                 font-size:2.1rem;
             }
-
             .container{
                 padding:20px;
             }
-
             .subtitle{
                 font-size:1rem;
             }
-
         }
-
     </style>
-
 </head>
 
 <body>
 
     <div class="container">
-        <div class="subtitle">
-        </div>
+        <div class="subtitle"></div>
 
         <div class="video-box">
-            <!--video controls autoplay muted loop-->
-                <!--source src="CompleteVideo.mp4" type="video/mp4"-->
-                <img 
-                      src="infodrome.jpg" 
-                      alt="Aperçu de la vidéo Blue Stream"
-                      class="img-responsive"
-                      loading="lazy"
-                      decoding="async" display: block; max-width: 50px; height: auto; margin: 0 auto; />
-            <!--/video-->
-            <div class="video-overlay">
+            
+            <img 
+              src="infodrome.jpg" 
+              alt="Aperçu de la vidéo Blue Stream"
+              class="img-responsive"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <div class="video-overlay"></div>
+            
+            <br><br>
+            
+            <div class="maclasse" style="text-align: center; font-family: Arial, Helvetica, sans-serif; color: white; font-weight: bold; font-size: large;">
+                <p> SOURCE : Linfodrome - WEB - online </p>
             </div>
-            <br>
-            <br>
-                <div class="maclasse" style="text-align: center; font-family: Arial, Helvetica, sans-serif; color: white; font: bold; font-size: large;">
-                    <p> SOURCE : WEB - abidjan.net - Youtube - Tagneu G </p>
-                </div>
         </div>
 
-        <div class="footer">
-        </div>
-
+        <div class="footer"></div>
     </div>
 
 </body>
